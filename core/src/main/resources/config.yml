@@ -46,6 +46,8 @@ waiting-server: ""
 # The message (MOTD) shown in the multiplayer server list motd when maintenance is enabled.
 # If you put in multiple entries, one of them will be chosen randomly on every ping.
 # The type of mode can be defined in the command, or will be the default mode.
+# Start either line with <center> to center it independently; use <br> or a newline between lines.
+# Example: "<center><red>Currently under maintenance<br><center><gold>%REASON%"
 ping-message:
   enabled: true
   # Always uses 'default' if not defined in the command or not present in the config.

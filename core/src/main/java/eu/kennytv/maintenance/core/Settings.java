@@ -21,6 +21,7 @@ import eu.kennytv.maintenance.api.event.MaintenanceReloadedEvent;
 import eu.kennytv.maintenance.core.config.Config;
 import eu.kennytv.maintenance.core.config.ConfigSection;
 import eu.kennytv.maintenance.core.config.DisplayedMessages;
+import eu.kennytv.maintenance.core.util.MotdCentering;
 import eu.kennytv.maintenance.core.util.ServerType;
 import java.io.File;
 import java.io.IOException;
@@ -497,7 +498,7 @@ public class Settings implements eu.kennytv.maintenance.api.Settings {
 
     private Component getPingMessage(final DisplayedMessages list, @Nullable final String mode) {
         final String component = list.getRandomEntry(mode);
-        return parse(plugin.replacePingVariables(component, mode));
+        return MotdCentering.center(plugin.replacePingVariables(component, mode), this::parse);
     }
 
     private DisplayedMessages loadPingMessages(final ConfigSection section) {

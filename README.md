@@ -26,6 +26,22 @@ A full list of commands, permissions and configuration options can be found in t
 * [PlaceholderAPI addon](https://hangar.papermc.io/kennytv/MaintenanceAddon)
 
 
+To center either MOTD line, put `<center>` at its beginning. For example:
+
+```yaml
+ping-message:
+  enabled: true
+  messages:
+    default:
+      - "<center><red><bold>Under maintenance</bold><br><center><gradient:gold:yellow>%REASON%"
+```
+
+Each line is centered independently after placeholders are resolved. Actual newlines also work.
+Formatting is preserved, including gradients and font tags. Centering uses AdvancedServerList's
+270-pixel width and bundled default, uniform, and alt font metrics. Unknown fonts use default
+metrics; unknown glyphs use a 6-pixel advance (7 when bold), so resource-pack fonts are approximate.
+Lines without `<center>` keep their existing alignment.
+
 ## Localization
 The English base language file is localized using Crodwin. You can see and update translations here: https://crowdin.com/project/maintenance
 

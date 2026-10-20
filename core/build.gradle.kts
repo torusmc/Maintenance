@@ -25,6 +25,11 @@ dependencies {
     compileOnly(libs.guava)
     compileOnly(libs.gson)
     compileOnly(libs.snakeyaml)
+    testImplementation(libs.adventureTextMinimessage)
+    testImplementation(libs.adventureTextSerializerPlain)
+    testImplementation(libs.adventureTextSerializerLegacy)
+    testImplementation(libs.gson)
+    testImplementation(libs.guava)
 }
 
 java {
